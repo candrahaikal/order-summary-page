@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: 'Red Hat Display';
+      width: 100vw;
+      height: 100vh;
+      padding: 40px 0;
+      background-image: url(images/pattern-background-desktop.png);
+      background-repeat: no-repeat;
+      background-color: hsl(225, 100%, 96%);
+
+    }
+    .container{
+      width: 25%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .up-row, .bottom-row{
+      width: 100%;
+      box-shadow: 0 5px 20px rgba(70, 54, 54, 0.15);
+    }
+    .up-row{
+      height: 30%;     
+      background-image: url(images/illustration-hero.png);
+      background-size: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .bottom-row{
+      height: 70%;
+      background-color: #fff;
+      border-radius: 0 0 10px 10px;
+      padding: 25px 30px;
+      text-align: center;
+    }
+    #title{
+      font-size: 26px;
+      color: hsl(223, 47%, 23%);
+    }
+    #paragraph{
+      font-size: 14px;
+      font-weight: 400;
+      color: #bababa;
+      margin: 10px 0 8px 0;
+    }
+    .product-group{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: hsl(225, 100%, 98%);
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .product-stuff{
+      display: flex;
+    }
+    .product-stuff-text{
+      margin-left: 10px;
+    }
+    #product-stuff-title{
+      font-weight: 700;
+      font-size: 15px;
+      color: hsl(223, 47%, 23%);
+    }
+    #product-stuff-price{
+      font-size: 15px;
+      color: #bababa;
+    }
+    #product-change{
+      font-weight: 700;
+      font-size: 13px;
+      color: hsl(245, 75%, 52%);
+    }
+    .button-group{
+      font-family: 'Red Hat Display';
+      font-weight: 500;
+      border-radius: 5px;
+    }
+    .button-group a{
+      text-decoration: none;
+    }
+    #confirm-payment, #cancel-payment{
+      font-size: 13px;
+      font-weight: 700;
+    }
+    #confirm-payment{
+      width: 100%;
+      background-color: hsl(245, 75%, 52%);
+      color: #fff;
+      padding: 10px 0;
+      margin: 20px 0 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 5px 20px rgba(56, 41, 224, .3);
+    }
+    #cancel-payment{
+      color: #bababa;
+    }
+    @media screen and (max-width: 1150px){
+      .container{
+        width: 30%;
+      }
+    }
+
+    @media screen and (max-width: 376px){
+      .container{
+        width: 40%;
+      }
+    }
+
+    @media screen and (max-width: 375px){
+      body{
+        padding: 30px 15px;
+        background-image: url(images/pattern-background-mobile.png);
+      }
+      .container{
+        width: 100%;
+      }
+      .bottom-row{
+        height: auto;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="up-row"></div>
+    <div class="bottom-row">
+      <h1 id="title">Order Summary</h1>
+      <p id="paragraph">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+      <div class="product-group">
+        <div class="product-stuff">
+          <img src="images/icon-music.png" id="product-icon" alt="">
+          <div class="product-stuff-text">
+            <p id="product-stuff-title">Annual Plan</p>
+            <p id="product-stuff-price">$59.99/year</p>
+          </div>
+        </div>
+        <a href="" id="product-change">Change</a>
+      </div>
+      <div class="button-group">
+        <a href=""><p id="confirm-payment"> Proceed to Payment</p></a>
+        <a href=""><p id="cancel-payment"> Cancel Order</p></a>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>
